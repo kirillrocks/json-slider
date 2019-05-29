@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.item {
+			min-width: 100%;
+			width: 100%;
+			display: block;
+			min-height: 100vh;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		
+		.text {
+			position: absolute;
+			bottom: 10%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 24px;
+			font-family: 'Arial';
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+
+<div class="siema"></div>
+
+</body>
+
+<script type="text/javascript" src="siema.min.js"></script>
+
+<script>
+    function getSlides() {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://lp.codja-dev.com/data.json', true);
+
+        xhr.onload = function() {
+            if (this.status === 200) {
+                let obj = JSON.parse(xhr.responseText);
+                createSlides(obj);
+            }
+        };
+        xhr.send();
+    }
+
+    function createSlides(obj) {
+        document.querySelector('.siema').innerHTML = '';
+
+        obj.forEach(el => {
+            let node = document.createElement('div');
+            node.classList.add('item');
+            node.style.backgroundImage = 'url(' + el.picture + ')';
+
+            let txtNode = document.createElement('div');
+            txtNode.classList.add('text');
+            txtNode.innerHTML = el.text;
+            txtNode.style.color = el.color;
+
+            node.appendChild(txtNode);
+
+            document.querySelector('.siema').appendChild(node);
+        });
+
+        runSiema();
+    }
+
+    function runSiema() {
+        const mySiema = new Siema({
+            selector: '.siema',
+            duration: 300,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: false,
+            rtl: false,
+            onChange: function() {
+                let howManyItems = document.querySelectorAll('.item').length - 1;
+                let current = this.currentSlide;
+
+                if (howManyItems === current) {
+                    setTimeout(() => {
+                        this.destroy();
+                        getSlides();
+                    }, 1000);
+                }
+            },
+        });
+
+        setInterval(() => mySiema.next(), 1000);
+    }
+
+    getSlides();
+</script>
+
+</html>
