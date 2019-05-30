@@ -1,72 +1,84 @@
-[
-    {
-        "_id": "5cee43fc16203e7b64fe7912",
-        "picture": "http://placehold.it/1600x1600",
-        "color": "green",
-        "text": "Deserunt nulla quis labore laboris ad aliquip.",
-        "name": {
-            "first": "Thomas",
-            "last": "Eaton"
-        }
+{
+    "config": {
+        "time": 5000
     },
-    {
-        "_id": "5cee43fcc514436476d9365d",
-        "picture": "http://placehold.it/1920x1080",
-        "color": "blue",
-        "text": "Adipisicing ipsum sit sint fugiat amet ex anim ipsum minim elit do sint magna consectetur.",
-        "name": {
-            "first": "Isabelle",
-            "last": "Mooney"
+    "slides": [
+        {
+            "_id": "5cee43fc16203e7b64fe7912",
+            "picture": "http://placehold.it/1600x1600",
+            "color": "green",
+            "backgroundColor": "red",
+            "text": "Deserunt nulla quis labore laboris ad aliquip.",
+            "name": {
+                "first": "Thomas",
+                "last": "Eaton"
+            }
+        },
+        {
+            "_id": "5cee43fcc514436476d9365d",
+            "picture": "http://placehold.it/1920x1080",
+            "color": "blue",
+            "backgroundColor": "blue",
+            "text": "Adipisicing ipsum sit sint fugiat amet ex anim ipsum minim elit do sint magna consectetur.",
+            "name": {
+                "first": "Isabelle",
+                "last": "Mooney"
+            }
+        },
+        {
+            "_id": "5cee43fc4ed2cd15c7db00fd",
+            "picture": "http://placehold.it/1600x1600",
+            "color": "green",
+            "backgroundColor": "red",
+            "text": "Ipsum velit Lorem labore non enim et officia deserunt anim.",
+            "name": {
+                "first": "Hilary",
+                "last": "Powell"
+            }
+        },
+        {
+            "_id": "5cee43fc199b22ee5e2521c9",
+            "picture": "http://placehold.it/1200x800",
+            "color": "blue",
+            "backgroundColor": "red",
+            "text": "Sint consequat amet minim occaecat voluptate.",
+            "name": {
+                "first": "Sheree",
+                "last": "Carpenter"
+            }
+        },
+        {
+            "_id": "5cee43fce282d8b44d8880e4",
+            "picture": "http://placehold.it/1200x800",
+            "color": "brown",
+            "backgroundColor": "red",
+            "text": "Exercitation exercitation enim labore ad.",
+            "name": {
+                "first": "Golden",
+                "last": "Davenport"
+            }
+        },
+        {
+            "_id": "5cee43fcf759d73372ba34ea",
+            "picture": "http://placehold.it/800x1600",
+            "color": "green",
+            "backgroundColor": "red",
+            "text": "Proident elit magna pariatur laboris consectetur quis ut veniam amet nulla exercitation.",
+            "name": {
+                "first": "Rose",
+                "last": "Peters"
+            }
+        },
+        {
+            "_id": "5cee43fcf3aebd05a8ce367b",
+            "picture": "http://placehold.it/1600x1600",
+            "color": "brown",
+            "backgroundColor": "red",
+            "text": "Aliqua pariatur incididunt duis qui est.",
+            "name": {
+                "first": "Gilbert",
+                "last": "Chen"
+            }
         }
-    },
-    {
-        "_id": "5cee43fc4ed2cd15c7db00fd",
-        "picture": "http://placehold.it/1600x1600",
-        "color": "green",
-        "text": "Ipsum velit Lorem labore non enim et officia deserunt anim.",
-        "name": {
-            "first": "Hilary",
-            "last": "Powell"
-        }
-    },
-    {
-        "_id": "5cee43fc199b22ee5e2521c9",
-        "picture": "http://placehold.it/1200x800",
-        "color": "blue",
-        "text": "Sint consequat amet minim occaecat voluptate.",
-        "name": {
-            "first": "Sheree",
-            "last": "Carpenter"
-        }
-    },
-    {
-        "_id": "5cee43fce282d8b44d8880e4",
-        "picture": "http://placehold.it/1200x800",
-        "color": "brown",
-        "text": "Exercitation exercitation enim labore ad.",
-        "name": {
-            "first": "Golden",
-            "last": "Davenport"
-        }
-    },
-    {
-        "_id": "5cee43fcf759d73372ba34ea",
-        "picture": "http://placehold.it/800x1600",
-        "color": "green",
-        "text": "Proident elit magna pariatur laboris consectetur quis ut veniam amet nulla exercitation.",
-        "name": {
-            "first": "Rose",
-            "last": "Peters"
-        }
-    },
-    {
-        "_id": "5cee43fcf3aebd05a8ce367b",
-        "picture": "http://placehold.it/1600x1600",
-        "color": "brown",
-        "text": "Aliqua pariatur incididunt duis qui est.",
-        "name": {
-            "first": "Gilbert",
-            "last": "Chen"
-        }
-    }
-]
+    ]
+}

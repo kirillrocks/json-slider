@@ -20,7 +20,7 @@
 			background-repeat: no-repeat;
 			position: relative;
 		}
-		
+
 		.text {
 			position: absolute;
 			bottom: 10%;
@@ -28,7 +28,7 @@
 			right: 0;
 			text-align: center;
 			font-size: 24px;
-			font-family: 'Arial';
+			font-family: 'Arial', sans-serif;
 			font-weight: bold;
 		}
 	</style>
@@ -45,7 +45,7 @@
 <script>
     function getSlides() {
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://lp.codja-dev.com/data.json', true);
+        xhr.open('GET', 'http://lp.codja-dev.com/slider/data.json', true);
 
         xhr.onload = function() {
             if (this.status === 200) {
@@ -59,10 +59,11 @@
     function createSlides(obj) {
         document.querySelector('.siema').innerHTML = '';
 
-        obj.forEach(el => {
+        obj.slides.forEach(el => {
             let node = document.createElement('div');
             node.classList.add('item');
             node.style.backgroundImage = 'url(' + el.picture + ')';
+            node.style.backgroundColor = el.backgroundColor;
 
             let txtNode = document.createElement('div');
             txtNode.classList.add('text');
@@ -74,13 +75,13 @@
             document.querySelector('.siema').appendChild(node);
         });
 
-        runSiema();
+        runSiema(parseInt(obj.config.time));
     }
 
-    function runSiema() {
+    function runSiema(time) {
         const mySiema = new Siema({
             selector: '.siema',
-            duration: 300,
+            duration: 250,
             easing: 'ease-out',
             perPage: 1,
             startIndex: 0,
@@ -102,7 +103,7 @@
             },
         });
 
-        setInterval(() => mySiema.next(), 1000);
+        setInterval(() => mySiema.next(), time);
     }
 
     getSlides();
